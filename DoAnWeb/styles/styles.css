@@ -1,0 +1,383 @@
+/* Định dạng cho body */
+body {
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+    height: 100vh; /* Đảm bảo chiều cao của body là 100% chiều cao viewport */
+    background-size: cover; /* Ảnh sẽ bao phủ toàn bộ màn hình */
+    background-position: center; /* Căn giữa ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Đảm bảo body chiếm ít nhất 100% chiều cao viewport */
+    overflow-x: hidden;
+}
+
+/* LazyLoad */
+.lazy {
+    opacity: 0;
+    transform: translateY(50px); /* Text and image start from 50px below */
+    transition: all 0.6s ease;   /* Smooth transition for slide-up */
+}
+
+.lazy.show {
+    opacity: 1;
+    transform: translateY(0); /* Slide up to its original position */
+}
+
+/* Các quy tắc CSS khác */
+.background {
+    display: flex;
+    justify-content: center; /* Căn giữa ảnh theo chiều ngang */
+    align-items: center; /* Căn giữa ảnh theo chiều dọc */
+    width: 100vw; /* 100% chiều rộng của viewport */
+    height: auto;
+    max-width: none; /* Đảm bảo không giới hạn chiều rộng */
+    object-fit: cover;
+    line-height: 0;
+}
+
+/*Background img và video*/
+.background img {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh; /* Giữ tỷ lệ của ảnh */
+    display: block; /* Loại bỏ khoảng trắng dưới ảnh */
+    object-fit: cover;
+}
+
+/* Định dạng cho lớp phủ đen */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#overlay-1 {
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+#overlay-2 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent);
+}
+
+#overlay-3 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, black, transparent);
+}
+
+/* Định dạng cho phần chứa ảnh và chữ */
+.image-container {
+    position: relative; /* Thiết lập vị trí tương đối để chứa các phần tử tuyệt đối bên trong */
+    display: inline-block; /* Đảm bảo kích thước của container phù hợp với nội dung */
+}
+
+/* Định dạng cho overlay text*/
+.overlay-text {
+    font-family: Montserrat;
+    position: absolute; /* Đặt vị trí tuyệt đối để đè lên ảnh */
+    white-space: nowrap;
+    letter-spacing: 1.2px;
+    line-height: 1;
+}
+#overlay-text-1 { 
+    letter-spacing: 1.5px;
+    top: 55%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px;
+}
+#overlay-text-2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333333;
+    text-align: left;
+    padding: 5px;
+    text-align: center;
+}
+
+#overlay-text-3 { 
+    letter-spacing: 1.5px;
+    top: 55%;
+    left: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    padding: 5px;
+}
+
+#overlay-text-carousel {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+#overlay-text-title {
+    font-size: 2.5rem;
+    font-family:'Noto Serif Display'; 
+    font-weight: 1000;
+    color: #F4EBD0;
+    margin: 0;
+}
+
+#overlay-text-content {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 3vh;
+    white-space: normal;
+    color: #F4EBD0;
+}
+
+/*Định dạng cho nút*/
+.overlay-button-white a {
+    font-family: fantasy;
+    letter-spacing: normal;
+    font-size: 1.2rem;
+    color: black; /* Màu chữ khi không hover */
+    text-decoration: none;
+    padding: 6px 10px;
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+.overlay-button-white a:hover {
+    background-color: #333333; /* Màu nền khi hover */
+    color: white;
+}
+
+.overlay-button-black a {
+    font-family: fantasy;
+    letter-spacing: normal;
+    font-size: 1.2rem;
+    color: white; /* Màu chữ khi không hover */
+    text-decoration: none;
+    padding: 6px 10px;
+    background-color: #333333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.overlay-button-black a:hover {
+    background-color: white; /* Màu nền khi hover */
+    color: #333333;
+}
+
+.button-black {
+    font-family: 'Noto Serif Display'; 
+    font-weight: bold;
+    letter-spacing: normal;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    background-color: #333333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+.button-black:hover {
+    background-color: white;
+    color: #333333;
+}
+
+.button-white {
+    font-family: 'Noto Serif Display', serif, ui-monospace; 
+    font-weight: bold;
+    letter-spacing: normal;
+    font-size: 1.2rem;
+    color: #333333;
+    text-decoration: none;
+    padding: 6px 10px;
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+.button-white:hover {
+    background-color: #333333;
+    color: white;
+}
+
+.messages p {
+    text-align: center;
+}
+
+/* Định Dạng cho Home 1*/
+.home {
+    background-color: #F4EBD0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+.recipes{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+.recipe-item a{
+    text-decoration: none;
+}
+
+#home {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+.recipe-grid {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.recipe-item {
+    transition: transform 0.3s ease;
+    width: 200px; /* Đặt chiều rộng cố định cho mỗi mục */
+}
+
+.recipe-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.recipe-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.recipe-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Định dạng cho slider container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #F4EBD0;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; 
+}
+
+.slide {
+    flex: 1 0 20%;
+    height: 35vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #F4EBD0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.slide img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.1);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+ 
+
+/*Thanh NEWLETTERS*/
+.subscribe {
+    font-family: 'Montserrat', serif, ui-monospace;
+    text-align: center;
+    background-color: #333333;
+    line-height: 0.7;
+    min-height: 40vh;
+    min-width: 100vw;
+}
+.subscribe p {
+    color: white; 
+}
+
+#email {
+    font-family: 'Montserrat', serif, ui-monospace;
+    background-color: white;
+    height: 4vh;
+    width: 30vw;
+}
+
+#email input {
+    font-family: 'Montserrat', serif, ui-monospace;
+    width: 150px; /* Chiếm toàn bộ chiều rộng của thanh tìm kiếm */
+    padding: 5px 10px;
+    border: 2px solid black; /* Đường viền của ô input */
+    border-radius: 10px;
+    outline: none;
+    color: #333333;
+}
+
+/* Định dạng thông báo */
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.7rem;
+    height: 1vh;
+}
+
+.subscribe-button {
+    font-family: fantasy, serif, ui-monospace; 
+    letter-spacing: normal;
+    font-size: 1.2rem;
+    color: #333333;
+    text-decoration: none;
+    padding: 6px 10px;
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+.subscribe-button:hover {
+    background-color: #333333;
+    color: white;
+}

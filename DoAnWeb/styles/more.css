@@ -1,0 +1,67 @@
+.post {
+    width: 70vw;
+    min-height: auto;
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.post img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5vh;
+    width: 70vw;
+    height: auto;
+}
+
+.mini-title {
+    font-weight: bold;
+    margin: 0;
+    color: #666666;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.subtitle { 
+    font-weight: bold;
+    margin: 0;
+    color: #666666;
+}
+
+.topic {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 5vh 0vw;
+}
+
+.content{ 
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 1vh 5vw;
+}
+
+.notfound-post {
+    width: 70vw;
+    min-height: 70vh;
+    margin-top: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.notfound-title {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.notfound-mini-title {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 3vh;
+}

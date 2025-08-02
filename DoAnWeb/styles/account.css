@@ -1,0 +1,81 @@
+body {
+    overflow-y:hidden;
+    background-image: url(../images/bg-3.png);
+}
+
+.title {
+    font-family: 'Noto Serif Display', serif, ui-monospace; 
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    font-style: italic;
+    text-align: center;
+    color: #333333;
+}
+
+.sign-in {
+    background-color: #F4EBD0;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15vh;
+    width: 15vw;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.sign-up {
+    background-color: #F4EBD0;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10vh;
+    width: 15vw;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.required {
+    font-size: 0.7rem;
+    text-align:right;
+    color:darkgray;
+    margin: 0;
+}
+
+.table-login {
+    margin: 0 auto;
+}
+
+tr {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    width: 15vw;
+    height: 3.5vh;
+    border: 1px solid #333333;
+    font-family: 'Montserrat', serif, ui-monospace;
+    margin-bottom: 1vh;
+}
+
+.content { 
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    color: #333333;
+    text-align: left;
+}
+
+.input-form {
+    width: 15vw;
+    margin-bottom: 1vh;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
